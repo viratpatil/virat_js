@@ -1,3 +1,7 @@
+/**
+ * Generator Functions
+ * Generators are functions that can be exited and later re-entered. Their context (variable bindings) will be saved across re-entrances
+ */
 var count = 0;
 function *generatorFunc() {
     while(true) {
@@ -6,5 +10,5 @@ function *generatorFunc() {
 }
 
 const genFunc = generatorFunc();
-console.log(genFunc.next()); // 1
-console.log(genFunc.next()); // 2
+console.log(genFunc.next()); // { value: 0, done: false }
+console.log(genFunc.next()); // { value: 1, done: false }
